@@ -7,16 +7,16 @@ class: Workflow
 requirements:
   - class: ScatterFeatureRequirement
   - class: StepInputExpressionRequirement
+  - class: InlineJavascriptRequirement
 
 inputs:
   - id: bam_path
     type: File
+
 outputs:
-  - id: align_output_bam
-    type:
-      type: array
-      items: File
-    outputSource: align/output_bam
+  - id: merged_bam
+    type: File
+    outputSource: merge/MERGED_OUTPUT
 
 steps:
   - id: bamtoreadgroup
@@ -49,3 +49,14 @@ steps:
         source: bamtoreadgroup/output_readgroup
     out:
       - id: output_bam
+
+  - id: merge
+    run: unix_merge_cmd.cwl
+    in:
+      - id: INPUT
+        source: align/output_bam
+      - id: OUTPUT
+        source: bam_path
+        valueFrom: $(self.basename)
+    out:
+      - id: MERGED_OUTPUT

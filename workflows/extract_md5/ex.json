@@ -1,0 +1,19 @@
+{
+    "aws_config": {
+        "class": "File",
+        "path": "/home/ubuntu/.aws/config"
+    },
+    "aws_shared_credentials": {
+        "class": "File",
+        "path": "/home/ubuntu/aws_jhsavage_credentials"
+    },
+    "bam_signpost_id": "fe73fd64-9913-4fee-bdc7-4a2de2e14606",
+    "endpoint_json": {
+        "class": "File",
+        "path": "/home/ubuntu/endpoint.json"
+    },
+    "load_bucket": "s3://bioinformatics_scratch/maydeletetest/bytes",
+    "load_s3cfg_section": "ceph",
+    "signpost_base_url": "signpost.service.consul/v0/did/",
+    "uuid": "123e4567-e89b-12d3-a456-426655440000"
+}
