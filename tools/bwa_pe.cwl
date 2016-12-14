@@ -4,7 +4,7 @@ cwlVersion: v1.0
 
 requirements:
   - class: DockerRequirement
-    dockerPull: quay.io/ncigdc/bwa:1
+    dockerPull: quay.io/ncigdc/bwa:stock_0.7.12
   - class: InlineJavascriptRequirement
   - class: ShellCommandRequirement
 
