@@ -81,9 +81,7 @@ expression: |
       for (var i = 0; i < inputs.readgroup_path.length; i++) {
         var readgroup_path = inputs.readgroup_path[i];
         var readgroup_basename = local_basename(readgroup_path.location);
-        if (include(readgroup_basename_array, readgroup_basename)) {
-          readgroup_array.push(readgroup_path);
-        }
+        readgroup_array.push(readgroup_path);
       }
 
       var readgroup_sorted = readgroup_array.sort(function(a,b) { return a.location > b.location ? 1 : (a.location < b.location ? -1 : 0) })
