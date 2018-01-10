@@ -22,7 +22,6 @@ inputs:
 
   - id: mirna_brute
     type: boolean
-    default: false
 
 outputs:
   - id: output_readgroup_paths

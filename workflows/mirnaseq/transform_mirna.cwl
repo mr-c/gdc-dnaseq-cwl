@@ -513,6 +513,8 @@ steps:
         source: sort_scattered_fastq1/OUTPUT
       - id: readgroup_path
         source: bam_readgroup_to_json/OUTPUT
+      - id: mirna_brute
+        default: false 
     out:
       - id: output_readgroup_paths
 
@@ -524,7 +526,7 @@ steps:
       - id: readgroup_path
         source: bam_readgroup_to_json/OUTPUT
       - id: mirna_brute
-        valueFrom: $(true)
+        default: true
     out:
       - id: output_readgroup_paths
 
@@ -535,6 +537,8 @@ steps:
         source: sort_scattered_fastq_o1/OUTPUT
       - id: readgroup_path
         source: bam_readgroup_to_json/OUTPUT
+      - id: mirna_brute
+        default: false
     out:
       - id: output_readgroup_paths
 
@@ -545,6 +549,8 @@ steps:
         source: sort_scattered_fastq_o2/OUTPUT
       - id: readgroup_path
         source: bam_readgroup_to_json/OUTPUT
+      - id: mirna_brute
+        default: false
     out:
       - id: output_readgroup_paths
 
