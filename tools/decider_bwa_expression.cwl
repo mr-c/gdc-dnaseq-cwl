@@ -20,6 +20,10 @@ inputs:
       type: array
       items: File
 
+  - id: mirna_brute
+    type: boolean
+    default: false
+
 outputs:
   - id: output_readgroup_paths
     format: "edam:format_3464"
@@ -81,7 +85,9 @@ expression: |
       for (var i = 0; i < inputs.readgroup_path.length; i++) {
         var readgroup_path = inputs.readgroup_path[i];
         var readgroup_basename = local_basename(readgroup_path.location);
-        readgroup_array.push(readgroup_path);
+        if (include(readgroup_basename_array, readgroup_basename) || inputs.mirna_brute) {
+          readgroup_array.push(readgroup_path);
+        }
       }
 
       var readgroup_sorted = readgroup_array.sort(function(a,b) { return a.location > b.location ? 1 : (a.location < b.location ? -1 : 0) })

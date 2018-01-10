@@ -523,6 +523,8 @@ steps:
         source: sort_scattered_fastq_s/OUTPUT
       - id: readgroup_path
         source: bam_readgroup_to_json/OUTPUT
+      - id: mirna_brute
+        valueFrom: $(true)
     out:
       - id: output_readgroup_paths
 
