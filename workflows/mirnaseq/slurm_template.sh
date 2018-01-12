@@ -42,7 +42,7 @@ function git_fetch_commit()
     cd ${repo_dir}
     git init
     git remote add origin ${git_repo}
-    eval "$(ssh-agent -s)" && ssh-add ${HOME}/.ssh/slurm_id_rsa && git fetch --depth 1 origin ${git_commit}
+    git fetch --depth 1 origin ${git_commit}
     git checkout FETCH_HEAD
     cd ${prev_dir}
 }
@@ -83,6 +83,7 @@ function main()
     mkdir -p ${workflow_dir}
     mkdir -p ${task_dir}
 
+    eval "$(ssh-agent -s)" && ssh-add ${HOME}/.ssh/slurm_id_rsa
     git_fetch_commit ${workflow_dir} ${cwl_workflow_git_hash} ${cwl_workflow_git_repo}
     git_fetch_commit ${task_dir} ${cwl_task_git_hash} ${cwl_task_git_repo}
     sed -i "s/\${xx_cwl_task_git_hash_xx}/${cwl_task_git_hash}/" ${task_path}
@@ -92,9 +93,11 @@ function main()
     then
         echo FAIL_RUNNER
         sudo rm -rf ${work_dir}
+        kill $SSH_AGENT_PID
         exit 1
     fi
     sudo rm -rf ${work_dir}
+    kill $SSH_AGENT_PID
 }
 
 main "$@"
