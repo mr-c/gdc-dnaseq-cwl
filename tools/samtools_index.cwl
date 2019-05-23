@@ -50,3 +50,6 @@ arguments:
     position: 2
 
 baseCommand: [/usr/local/bin/samtools, index]
+
+$namespaces:
+  edam: "http://edamontology.org/"

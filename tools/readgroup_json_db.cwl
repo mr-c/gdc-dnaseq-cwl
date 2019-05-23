@@ -43,3 +43,6 @@ outputs:
       glob: $(inputs.job_uuid + ".db")         
           
 baseCommand: [/usr/local/bin/readgroup_json_db]
+
+$namespaces:
+  edam: "http://edamontology.org/"

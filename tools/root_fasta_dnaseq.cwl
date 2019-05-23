@@ -78,3 +78,6 @@ outputs:
       - ^.dict
 
 baseCommand: ['true']
+
+$namespaces:
+  edam: "http://edamontology.org/"

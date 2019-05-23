@@ -53,3 +53,6 @@ arguments:
     separate: true
 
 baseCommand: [java, -jar, /usr/local/bin/gatk-package-4.0.7.0-local.jar, BaseRecalibrator]
+
+$namespaces:
+  edam: "http://edamontology.org/"

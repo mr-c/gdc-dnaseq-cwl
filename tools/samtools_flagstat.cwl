@@ -34,3 +34,6 @@ outputs:
 stdout: $(inputs.INPUT.nameroot + ".flagstat")
 
 baseCommand: [/usr/local/bin/samtools, flagstat]
+
+$namespaces:
+  edam: "http://edamontology.org/"

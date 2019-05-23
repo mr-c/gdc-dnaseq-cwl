@@ -45,3 +45,6 @@ outputs:
       glob: "result.json"
 
 baseCommand: [/usr/local/bin/fastq_cleaner]
+
+$namespaces:
+  edam: "http://edamontology.org/"

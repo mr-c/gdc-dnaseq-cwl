@@ -71,3 +71,6 @@ arguments:
     separate: false
 
 baseCommand: [java, -jar, /usr/local/bin/picard.jar, MarkDuplicates]
+
+$namespaces:
+  edam: "http://edamontology.org/"

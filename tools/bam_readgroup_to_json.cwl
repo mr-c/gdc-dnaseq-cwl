@@ -48,3 +48,6 @@ outputs:
       glob: "output.log"
 
 baseCommand: [/usr/local/bin/bam_readgroup_to_json]
+
+$namespaces:
+  edam: "http://edamontology.org/"

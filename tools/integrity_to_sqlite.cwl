@@ -57,3 +57,6 @@ outputs:
       glob: $(inputs.job_uuid + ".db")
 
 baseCommand: [/usr/local/bin/integrity_to_sqlite]
+
+$namespaces:
+  edam: "http://edamontology.org/"

@@ -32,3 +32,6 @@ outputs:
       glob: "fastqc.json"
 
 baseCommand: [/usr/local/bin/fastqc_to_json]
+
+$namespaces:
+  edam: "http://edamontology.org/"

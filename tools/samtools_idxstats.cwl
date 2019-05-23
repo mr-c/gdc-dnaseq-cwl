@@ -36,3 +36,6 @@ outputs:
 stdout: $(inputs.INPUT.nameroot + ".idxstats")
 
 baseCommand: [/usr/local/bin/samtools, idxstats]
+
+$namespaces:
+  edam: "http://edamontology.org/"

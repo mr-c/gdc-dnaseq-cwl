@@ -41,3 +41,6 @@ outputs:
       - .tbi
 
 baseCommand: "true"
+
+$namespaces:
+  edam: "http://edamontology.org/"

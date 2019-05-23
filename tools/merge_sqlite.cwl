@@ -73,3 +73,6 @@ outputs:
       glob: $(inputs.job_uuid + ".log")
 
 baseCommand: [/usr/local/bin/merge_sqlite]
+
+$namespaces:
+  edam: "http://edamontology.org/"

@@ -73,3 +73,6 @@ arguments:
     separate: false
 
 baseCommand: [java, -jar, /usr/local/bin/picard.jar, CollectOxoGMetrics]
+
+$namespaces:
+  edam: "http://edamontology.org/"

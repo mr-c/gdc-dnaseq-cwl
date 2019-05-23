@@ -38,3 +38,6 @@ outputs:
       glob: $(inputs.input.basename + ".log")
 
 baseCommand: [/usr/local/bin/bam_reheader]
+
+$namespaces:
+  edam: "http://edamontology.org/"

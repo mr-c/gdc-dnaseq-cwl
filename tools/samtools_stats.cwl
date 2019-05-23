@@ -34,3 +34,6 @@ outputs:
 stdout: $(inputs.INPUT.nameroot + ".stats")
 
 baseCommand: [/usr/local/bin/samtools, stats]
+
+$namespaces:
+  edam: "http://edamontology.org/"

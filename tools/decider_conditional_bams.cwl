@@ -59,3 +59,6 @@ expression: |
 
       return {'output': output, 'sqlite': sqlite};
     }
+
+$namespaces:
+  edam: "http://edamontology.org/"

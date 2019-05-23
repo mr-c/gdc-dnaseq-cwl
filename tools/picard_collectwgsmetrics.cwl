@@ -52,3 +52,6 @@ arguments:
     separate: false
 
 baseCommand: [java, -jar, /usr/local/bin/picard.jar, CollectWgsMetrics]
+
+$namespaces:
+  edam: "http://edamontology.org/"

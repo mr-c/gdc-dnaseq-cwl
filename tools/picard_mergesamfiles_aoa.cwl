@@ -156,3 +156,6 @@ arguments:
       }
 
 baseCommand: []
+
+$namespaces:
+  edam: "http://edamontology.org/"

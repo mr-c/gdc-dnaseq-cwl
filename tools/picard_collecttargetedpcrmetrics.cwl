@@ -174,3 +174,6 @@ arguments:
     position: -7
 
 baseCommand: [java]
+
+$namespaces:
+  edam: "http://edamontology.org/"

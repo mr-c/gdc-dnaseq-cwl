@@ -168,3 +168,6 @@ arguments:
     separate: false
 
 baseCommand: [java, -jar, /usr/local/bin/picard.jar, CollectMultipleMetrics]
+
+$namespaces:
+  edam: "http://edamontology.org/"

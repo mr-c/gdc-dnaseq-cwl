@@ -119,3 +119,6 @@ outputs:
       glob: "*_fastqc.zip"
           
 baseCommand: [/usr/local/FastQC/fastqc]
+
+$namespaces:
+  edam: "http://edamontology.org/"

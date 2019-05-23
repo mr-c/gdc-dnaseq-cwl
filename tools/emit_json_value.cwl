@@ -10,9 +10,6 @@ class: ExpressionTool
 inputs:
   - id: input
     type: File
-    inputBinding:
-      loadContents: true
-      valueFrom: $(null)
 
   - id: key
     type: string

@@ -43,3 +43,6 @@ outputs:
 
           
 baseCommand: [/usr/local/bin/fastqc_db]
+
+$namespaces:
+  edam: "http://edamontology.org/"

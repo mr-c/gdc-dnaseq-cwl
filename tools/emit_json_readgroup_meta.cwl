@@ -13,9 +13,6 @@ class: ExpressionTool
 inputs:
   - id: input
     type: File
-    inputBinding:
-      loadContents: true
-      valueFrom: $(null)
 
 outputs:
   - id: output

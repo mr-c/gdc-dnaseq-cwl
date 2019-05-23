@@ -130,3 +130,6 @@ arguments:
       }
 
 baseCommand: [bash, -c]
+
+$namespaces:
+  edam: "http://edamontology.org/"
